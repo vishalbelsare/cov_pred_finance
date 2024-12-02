@@ -9,6 +9,7 @@ packages = [{include = "cvx"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9.0"
+numpy = "*"
 pandas = "*"
 cvxpy-base = "*"
 clarabel = "*"
@@ -25,7 +26,7 @@ tqdm = "*"
 scikit-learn = "*"
 loguru = "*"
 plotly = "*"
-cvxsimulator = "*"
+#cvxsimulator = "*"
 statsmodels = "*"
 
 [build-system]
@@ -41,3 +42,6 @@ exclude = [
     "experiments"
 ]
 namespace-packages = ["cvx/covariance"]
+
+[tool.deptry.per_rule_ignores]
+DEP002 = ["clarabel"]
