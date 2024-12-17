@@ -7,8 +7,10 @@ readme = "README.md"
 repository = "https://github.com/cvxgrp/cov_pred_finance"
 packages = [{include = "cvx"}]
 
+
 [tool.poetry.dependencies]
-python = ">=3.9.0"
+python = ">=3.10"
+numpy = "*"
 pandas = "*"
 cvxpy-base = "*"
 clarabel = "*"
@@ -25,7 +27,6 @@ tqdm = "*"
 scikit-learn = "*"
 loguru = "*"
 plotly = "*"
-cvxsimulator = "*"
 statsmodels = "*"
 
 [build-system]
@@ -41,3 +42,6 @@ exclude = [
     "experiments"
 ]
 namespace-packages = ["cvx/covariance"]
+
+[tool.deptry.per_rule_ignores]
+DEP002 = ["clarabel"]
